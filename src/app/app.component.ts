@@ -26,8 +26,9 @@ export class AppComponent implements OnInit{
 
   getUsers(){
     this.userService.getUsers().subscribe( (user: User[]) => {
-      this.users.data = user;
-      console.log(user);
+      user.forEach((user: any) =>{ 
+       this.users.data = user;
+      })
       
     })
   }

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class UsersService {
 
-  api: string = '../../assets/data.json'
+  api: string = 'https://dothbe.com/test'
   constructor(private http: HttpClient) { }
 
   getUsers():Observable<any>{
