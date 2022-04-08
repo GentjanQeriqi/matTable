@@ -8,28 +8,7 @@ import { UsersService } from './services/users.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
 
-  displayedColumns: string[] = [
-    'testId',
-    'name',
-    'email',
-    'location',
-    'gender'
-  ];
-  users = new MatTableDataSource<User>();
-  constructor(private userService: UsersService) {}
-
-  ngOnInit(): void {
-      this.getUsers();
-  }
-
-  getUsers(){
-    this.userService.getUsers().subscribe( (user: User[]) => {
-      user.forEach((user: any) =>{ 
-       this.users.data = user;
-      })
-      
-    })
-  }
+  
 }
